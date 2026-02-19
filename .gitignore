@@ -1,6 +1,21 @@
+# Sanal ortam
 venv/
-data/
+
+# VS Code ayarları
 .vscode/
+
+# Derlenmiş Python dosyaları
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Log dosyaları
 *.log
+
+# Üretilmiş data klasörü
+data/
+
+# MacOS ve Linux sistem dosyaları
+.DS_Store
+Thumbs.db
