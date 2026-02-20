@@ -14,7 +14,6 @@ earthquake-warning-system/
 ├── test.py                 # Model testing and evaluation
 ├── requirements.txt        # Dependency list
 └── .gitignore              # Excludes unnecessary files
-Code
 ```
 
 ---
