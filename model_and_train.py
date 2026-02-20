@@ -1,8 +1,6 @@
 import numpy as np
 import os
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Dropout, BatchNormalization
-from tensorflow.keras.callbacks import EarlyStopping
+import tensorflow as tf
 import matplotlib.pyplot as plt
 
 # veri yolu
@@ -21,38 +19,42 @@ X_train = X_train[..., np.newaxis] # (800, 1500, 1)
 X_test = X_test[..., np.newaxis] # (200, 1500, 1)
 
 # CNN modeli oluştur
-model = Sequential()
+model = tf.keras.Sequential()
+
+import tensorflow as tf
+
+# CNN modeli oluştur
+model = tf.keras.Sequential()
 
 # 1. conv katmanı
-model.add(Conv1D(filters = 16, kernel_size = 5, activation = "relu", input_shape= (1500, 1)))
-model.add(BatchNormalization())
-model.add(MaxPooling1D(pool_size = 2))
+model.add(tf.keras.layers.Conv1D(filters=16, kernel_size=5, activation="relu", input_shape=(1500, 1)))
+model.add(tf.keras.layers.BatchNormalization())
+model.add(tf.keras.layers.MaxPooling1D(pool_size=2))
 
 # 2. conv katmanı
-model.add(Conv1D(filters = 32, kernel_size = 5, activation = "relu"))
-model.add(BatchNormalization())
-model.add(MaxPooling1D(pool_size = 2))
+model.add(tf.keras.layers.Conv1D(filters=32, kernel_size=5, activation="relu"))
+model.add(tf.keras.layers.BatchNormalization())
+model.add(tf.keras.layers.MaxPooling1D(pool_size=2))
 
 # 3. conv katmanı
-model.add(Conv1D(filters = 64, kernel_size = 3, activation = "relu"))
-model.add(BatchNormalization())
-model.add(MaxPooling1D(pool_size = 2))
-
+model.add(tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation="relu"))
+model.add(tf.keras.layers.BatchNormalization())
+model.add(tf.keras.layers.MaxPooling1D(pool_size=2))
 
 # flatten ve fully connected katmanlar
-model.add(Flatten())
-model.add(Dense(64, activation= "relu"))
-model.add(Dropout(0.5)) # overfitting engellemek için
-model.add(Dense(1, activation= "sigmoid")) # binary classification
+model.add(tf.keras.layers.Flatten())
+model.add(tf.keras.layers.Dense(64, activation="relu"))
+model.add(tf.keras.layers.Dropout(0.5))  # overfitting engellemek için
+model.add(tf.keras.layers.Dense(1, activation="sigmoid"))  # binary classification
 
 # compile derleme
-model.compile(optimizer= "adam", loss= "binary_crossentropy", metrics = ["accuracy"])
+model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
 
 # model özeti
 model.summary()
 
 # early stopping (validation kaybı iyileşmezse durdur)
-early_stop = EarlyStopping(monitor="val_loss", patience=5, restore_best_weights= True)
+early_stop = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True)
 
 # modeli eğit
 history = model.fit(
