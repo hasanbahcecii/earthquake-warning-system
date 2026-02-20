@@ -19,3 +19,6 @@ data/
 # MacOS ve Linux sistem dosyaları
 .DS_Store
 Thumbs.db
+
+# Model
+cnn_seismic_model.h5
