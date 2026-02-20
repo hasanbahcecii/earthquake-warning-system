@@ -5,7 +5,7 @@ This project is a **Python-based machine learning system** designed to process s
 ---
 
 ## 📂 Project Structure
-
+```
 earthquake-warning-system/
 │
 ├── preprocessing.py        # Data preprocessing and train/test split
@@ -15,7 +15,7 @@ earthquake-warning-system/
 ├── requirements.txt        # Dependency list
 └── .gitignore              # Excludes unnecessary files
 Code
-
+```
 
 ---
 
