@@ -4,7 +4,7 @@ This project is a **Python-based machine learning system** designed to process s
 
 ---
 
-## Problem Definition
+## 📌 Problem Definition
 
 - Detect P-waves in seismic signals before destructive S-waves arrive.
 
@@ -16,7 +16,7 @@ This project is a **Python-based machine learning system** designed to process s
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 ```
 earthquake-warning-system/
 │
@@ -30,7 +30,7 @@ earthquake-warning-system/
 
 ---
 
-## 📂 Dataset Specification
+## 📊 Dataset Specification
 
 Type: Synthetic time series dataset
 
