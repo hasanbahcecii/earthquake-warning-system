@@ -21,38 +21,45 @@ earthquake-warning-system/
 ## ⚙️ Setup
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone git@github.com:hasanbahcecii/earthquake-warning-system.git
    cd earthquake-warning-system
-
+```
     Create and activate a virtual environment:
-    bash
+```bash
 
     python3 -m venv venv
     source venv/bin/activate
-
+```
     Install dependencies:
-    bash
+```bash
 
     pip install -r requirements.txt
+```
 
-🚀 Usage
-1. Data Preprocessing
-bash
+---
 
+## 🚀 Usage
+
+Data Preprocessing
+```bash
 python preprocessing.py
+```
 
 2. Model Training
-bash
+```bash
 
 python model_and_train.py
-
+```
 3. Model Testing
-bash
+```bash
 
 python test.py
+```
 
-📊 Outputs
+---
+
+## 📊 Outputs
 
     Training and validation loss/accuracy are visualized with plots.
 
@@ -60,7 +67,9 @@ python test.py
 
     Train/Test datasets are stored in the data/ directory.
 
-🛠️ Technologies
+---
+
+## 🛠️ Technologies
 
     Python 3.12
 
@@ -71,3 +80,9 @@ python test.py
     TensorFlow / Keras
 
     Matplotlib
+
+---
+
+## 📜 License
+
+MIT
