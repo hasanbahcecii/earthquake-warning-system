@@ -1,41 +1,5 @@
 """
 Earthquake early warning system with 1D CNN
-
-Problem definiton: 
-    -Detect P-waves in seismic signals before destructive S-waves arrive.
-    -Train a 1D CNN on labeled seismic waveform datasets to learn P-wave patterns.
-    -Use the trained model to predict P-waves in real time, enabling rapid alerts.
-    Aim: Since P-waves are short in duration and high in frequency, the aim is to capture these early signatures for timely warning.
-
-
-Dataset Specification
-
-    Type: Synthetic time series dataset
-
-    Signal duration: 15 seconds
-
-    Sampling rate: 100 Hz → 1500 samples per signal
-
-    Classes:
-
-    Class 1: Earthquake signal (contains P-wave onset and seismic activity)
-
-    Class 0: Non-earthquake signal (background noise or normal vibration)
-
-Technologies: 1D CNN tensorflow/keras
-
-Plan:
-
-load_and_visualize.py → Loads the seismic dataset and plots sample signals to show earthquake vs. noise patterns.
-
-preprocessing.py → Normalizes and reshapes signals, then splits them into training and testing sets.
-
-model_and_train.py → Builds the 1D CNN architecture with TensorFlow/Keras and trains it on the prepared data.
-
-test.py → Uses the trained model to predict on unseen signals and evaluates classification accuracy.
-
-install libraries: freeze
-pip install numpy matplotlib scikit-learn tensorflow seaborn
 """
 
 
