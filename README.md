@@ -69,7 +69,7 @@ Classes:
 
 ## 🚀 Usage
 
-Data Preprocessing
+1. Data Preprocessing
 ```bash
 python preprocessing.py
 ```
